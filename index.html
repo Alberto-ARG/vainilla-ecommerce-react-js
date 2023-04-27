@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script src="/scripts/react.development.js" ></script>
+    <script src="/scripts/react-dom.development.js" ></script>
+    <script src="/scripts/babel.min.js"></script>
+    <script src="/components/tarjeta-tienda.js" type="text/babel"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="app-root"></div>
+    </div>
+
+  
+
+    <script type="text/babel">
+      // Precios
+      const products = [
+  { name: "Glamorous Necklace", price: 39.99, description: "Make a statement with this stunning necklace. Featuring sparkling crystals and a unique design, it's perfect for dressing up any outfit." },
+  { name: "Luxury Watch", price: 99.99, description: "Stay on time and on trend with this luxurious watch. Made from high-quality materials, it's both stylish and functional." },
+  { name: "Stylish Sunglasses", price: 29.99, description: "Protect your eyes and look good doing it with these stylish sunglasses. With a classic design and UV protection, they're a must-have accessory." },
+  { name: "Elegant Handbag", price: 69.99, description: "Carry your essentials in style with this elegant handbag. Made from high-quality materials and featuring a chic design, it's perfect for any occasion." },
+  { name: "Premium Headphones", price: 149.99, description: "Experience music like never before with these premium headphones. Featuring noise-cancellation technology and superior sound quality, they're perfect for audiophiles." },
+  { name: "Fancy Ring", price: 79.99, description: "Add a touch of glamour to your look with this fancy ring. Featuring a sparkling stone and a unique design, it's sure to turn heads." },
+  { name: "Designer Scarf", price: 49.99, description: "Stay warm and stylish with this designer scarf. Made from soft and cozy materials, it's perfect for chilly weather." },
+  { name: "Chic Bracelet", price: 34.99, description: "Add a touch of sophistication to your look with this chic bracelet. Made from high-quality materials and featuring a unique design, it's perfect for any occasion." },
+  { name: "Classic Wallet", price: 24.99, description: "Keep your cards and cash organized with this classic wallet. Featuring a sleek design and multiple compartments, it's perfect for everyday use." },
+  { name: "Trendy Backpack", price: 89.99, description: "Stay organized and on trend with this trendy backpack. Featuring a spacious interior and multiple pockets, it's perfect for work, school, or travel." },
+  { name: "Fashionable Earrings", price: 19.99, description: "Add some sparkle to your look with these fashionable earrings. Featuring a unique design and high-quality materials, they're perfect for any occasion." },
+  { name: "Glossy Lipstick", price: 9.99, description: "Complete your look with this glossy lipstick. Featuring a long-lasting formula and a vibrant color, it's perfect for a night out." },
+  { name: "Stunning Perfume", price: 74.99, description: "Smell amazing all day with this stunning perfume. Featuring a captivating scent and a long-lasting formula, it's perfect for any occasion." },
+  { name: "Funky Sneakers", price: 59.99, description: "Add some fun to your footwear collection with these funky sneakers. Featuring a unique design and comfortable fit, they're perfect for everyday wear." },
+  { name: "Sporty Watch", price: 129.99, description: "Stay on top of your fitness goals with this sporty watch. Featuring multiple fitness tracking functions and a sleek design, it's perfect for active individuals." }
+  ]
+  
+          const listItems = []
+          for (let index = 0; index < products.length; index++) {
+
+            listItems.push( 
+             
+            )
+            
+          }
+
+          // convertir html to JSX https://transform.tools/html-to-jsx
+      
+      const container = document.getElementById('app-root');
+      const root = ReactDOM.createRoot(container);
+      root.render(
+
+        <>
+        
+        {
+          products.map((p,id)=>(
+            <TarjetaTienda name={p.name} price={p.price} description={p.description} key={id} ></TarjetaTienda>
+          ))
+        }
+        
+        
+        </>
+      
+      
+      )
+    </script>
+
+  </body>
+</html>
